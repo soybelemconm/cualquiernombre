@@ -1,0 +1,39 @@
+//
+// Body.
+// -----------------------------------------------------------------------------
+// Layout styles for body.
+
+// Block.
+.body {
+}
+
+// Elements.
+.body-wrapper {
+  overflow: hidden;
+}
+
+// Queries.
+@media ( min-width: @break-five-query ) {
+  .body-wrapper {
+    display: table;
+    table-layout: fixed;
+    min-height: 100%;
+    max-width: @break-five-max;
+    padding-right: @space * 2;
+    padding-left: @space * 2;
+  }
+}
+@media ( min-width: @break-six-query ) {
+  .body-wrapper {
+    max-width: @break-six-max;
+    padding-right: @space * 3;
+    padding-left: @space * 3;
+  }
+}
+@media ( min-width: @break-seven-query ) {
+  .body-wrapper {
+    max-width: @break-seven-max;
+    padding-right: @space * 4;
+    padding-left: @space * 4;
+  }
+}

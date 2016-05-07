@@ -1,0 +1,34 @@
+{{!
+
+    Renders:
+      Sidebar Tagged Title
+      Sidebar Taggled Links
+
+    Microdata:
+      Site Navigation Element
+      Site Navigation Element URL
+      Site Navigation Element Name
+
+}}
+
+<div class="sidebar-item sidebar-tagged">
+  
+  <h5 class="sidebar-title">Tagged</h5>
+
+  <div class="nav" role="navigation">
+
+    <div itemscope itemtype="http://schema.org/SiteNavigationElement" class="nav-item">
+      <a itemprop="url" href="{{@blog.url}}/tag/illustration/" title="Illustration"><span itemprop="name">Illustration</span></a>
+    </div>
+
+    <div itemscope itemtype="http://schema.org/SiteNavigationElement" class="nav-item">
+      <a itemprop="url" href="{{@blog.url}}/tag/photo/" title="Photo"><span itemprop="name">Photo</span></a>
+    </div>
+
+    <div itemscope itemtype="http://schema.org/SiteNavigationElement" class="nav-item">
+      <a itemprop="url" href="{{@blog.url}}/tag/quote/" title="Quote"><span itemprop="name">Quote</span></a>
+    </div>
+
+  </div>
+
+</div>

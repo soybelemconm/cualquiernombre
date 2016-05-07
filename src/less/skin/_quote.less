@@ -1,0 +1,21 @@
+//
+// Quote.
+// -----------------------------------------------------------------------------
+// Skin for quote.
+//
+
+
+// Block.
+.quote {
+  border: 0;
+  background-color: transparent;
+  &:extend( .h1 );
+}
+
+// Elements.
+.quote-source {
+  color: @quote-cite;
+}
+.quote-source a {
+  &:extend( .post-body p a );
+}

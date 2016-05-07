@@ -1,0 +1,23 @@
+{{!
+
+    Renders:
+      Author Name
+      Author Posts Count
+      Post
+      
+}}
+
+{{!< default}}
+
+{{#author}}
+  <div class="msg main-item main-message">
+    <p class="msg-item">Showing <strong>{{plural ../pagination.total empty='0' singular='% post' plural='% posts'}}</strong> by <strong>{{name}}</strong></p>
+    <a href="{{@blog.url}}" class="icon-ui icon-ui-next msg-item msg-back">Return Home</a>
+  </div>
+{{/author}}
+
+{{#foreach posts}}
+
+  {{> "post" }}
+
+{{/foreach}}

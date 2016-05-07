@@ -1,0 +1,27 @@
+//
+// Overlay.
+// -----------------------------------------------------------------------------
+// Skin for overlay.
+//
+
+// Block.
+.overlay {
+  color: @overlay;
+}
+
+// Elements.
+.overlay-inner {
+  background: @overlay-inner;
+}
+.overlay-item {
+  color: inherit;
+}
+.overlay-item:before {
+  color: @overlay-icon;
+}
+.overlay-item:hover {
+  color: @overlay-hover;
+}
+.overlay-item:hover:before {
+  color: @overlay-icon-hover;
+}

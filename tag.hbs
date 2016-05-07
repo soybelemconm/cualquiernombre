@@ -1,0 +1,20 @@
+{{!
+
+    Renders:
+      Keyword
+      Post
+
+}}
+
+{{!< default}}
+
+  <div class="msg main-item main-message">
+    <p class="msg-item">Showing posts tagged <strong>#{{#tag}}{{name}}{{/tag}}</strong></p>
+    <a href="{{@blog.url}}" class="icon-ui icon-ui-next msg-item msg-back">Return Home</a>
+  </div>
+
+{{#foreach posts}}
+  
+{{> "post" }}
+
+{{/foreach}}

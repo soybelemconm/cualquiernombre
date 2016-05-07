@@ -1,0 +1,123 @@
+//
+// Post Overlay.
+// -----------------------------------------------------------------------------
+// Post overlay.
+//
+
+// Block.
+.post--overlay {
+}
+
+// Elements.
+.post--overlay .post-wrapper {
+  position: relative;
+  margin-bottom: -@space * 2;
+}
+.post--overlay .post-media {
+  margin-bottom: 0;
+}
+.post--overlay .overlay-inner {
+  display: block;
+}
+.post--overlay .post-sidebar,
+.post--overlay .post-body .post-meta, {
+  position: absolute;
+  z-index: 1;
+}
+.post--overlay .post-sidebar {
+  top: @space;
+  left: @space;
+  padding-top: 0;
+  margin-left: 0;
+}
+.post--overlay .post-sidebar .meta-action {
+  position: relative;
+  top: 0;
+  margin-bottom: @space * 1.5;
+}
+.post--overlay .post-body > * {
+  display: none;
+}
+.post--overlay .post-body .post-meta {
+  display: block;
+  z-index: 3;
+  width: auto;
+  right: @space;
+  bottom: @space;
+  left: @space;
+  margin-bottom: 0;
+}
+
+// States.
+.post--overlay .overlay + .post-sidebar,
+.post--overlay .overlay + .post-sidebar + .post-body .post-meta {
+  &:extend( .overlay .overlay-inner );
+}
+.post--overlay .overlay-close,
+.post--overlay .overlay + .post-sidebar {
+  &:extend( .ani );
+  &:extend( .ani-up );
+  &:extend( .ani-hide );
+}
+.post--overlay .overlay + .post-sidebar + .post-body .post-meta {
+  &:extend( .ani );
+  &:extend( .ani-down );
+  &:extend( .ani-hide );
+}
+.post--overlay .post-wrapper:hover [data-js~="overlay-active"] .overlay-close,
+.post--overlay .post-wrapper:hover [data-js~="overlay-active"] + .post-sidebar,
+.post--overlay .post-wrapper:hover [data-js~="overlay-active"] + .post-sidebar + .post-body .post-meta {
+  &:extend( .ani-center );
+  &:extend( .ani-show );
+}
+.post--overlay .post-wrapper:hover [data-js~="overlay-active"] .overlay-inner,
+.post--overlay .post-wrapper:hover [data-js~="overlay-active"] + .post-sidebar,
+.post--overlay .post-wrapper:hover [data-js~="overlay-active"] + .post-sidebar + .post-body .post-meta {
+  &:extend( .overlay:not( [data-js~="overlay"] ):hover .overlay-inner );
+}
+
+// Queries.
+@media ( min-width: @break-two-query ) {
+  .post--overlay .post-wrapper {
+    margin-bottom: 0;
+  }
+}
+@media ( min-width: @break-three-query ) {
+  .post--overlay .post-body .post-meta {
+    right: @space * 1.5;
+    bottom: @space * 1.5;
+    left: @space * 1.5;
+  }
+  .post--overlay .post-sidebar {
+    top: @space * 1.5;
+    left: @space * 1.5;
+  }
+  .post--overlay .overlay-close {
+    top: @space * 1.5;
+    right: @space * 1.5;
+  }
+}
+@media ( min-width: @break-four-query ) {
+  .post--overlay .overlay-close {
+    transform: translateX( @space / 2 );
+  }
+  .post--overlay .overlay + .post-sidebar {
+    transform: translateX( -@space / 2 );
+  }
+  .post--overlay .post-body .post-meta {
+    display: none;
+  }
+}
+@media ( min-width: @break-seven-query ) {
+  .post--overlay .post-sidebar {
+    top: @space * 2;
+    left: @space * 2;
+  }
+  .post--overlay .post-sidebar .meta-action {
+    margin-bottom: @space * 2;
+  }
+  .post--overlay .overlay-close {
+    top: @space * 2;
+    right: @space * 2;
+  }
+}

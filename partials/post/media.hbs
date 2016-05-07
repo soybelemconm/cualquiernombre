@@ -1,0 +1,52 @@
+{{!
+
+    Renders:
+      Image - Photo
+      Embed - Audio, Video
+
+    Microdata:
+      Image - Photo
+
+}}
+
+{{#if image}}
+
+{{^has tag="_quote, _link, _chat, _audio, _video"}}
+<figure class="overlay post-wide post-media"{{^is "post"}} data-js="overlay overlay-active"{{/is}}>
+
+  <img itemprop="image" src="{{ image }}" alt="{{ title }}">
+
+  {{^is "post"}} 
+  <div class="overlay-inner">
+    <span class="icon-ui icon-ui-close btns-item overlay-item overlay-close" data-js="overlay-close"></span>
+  </div>
+  {{/is}} 
+  
+</figure>
+{{/has}}
+
+{{/if}}
+
+{{^if image}}
+
+{{#has tag="_audio, _video"}}
+<figure class="overlay post-wide post-media"{{^is "post"}} data-js="overlay overlay-active"{{/is}}>
+
+  <div data-js="embed post-embed">
+    <div data-js="embed-inner">
+
+      {{content words="0"}}
+    
+    </div>
+  </div>
+
+  {{^is "post"}} 
+  <div class="overlay-inner">
+    <span class="icon-ui icon-ui-close btns-item overlay-item overlay-close" data-js="overlay-close"></span>
+  </div>
+  {{/is}} 
+
+</figure>
+{{/has}}
+
+{{/if}}

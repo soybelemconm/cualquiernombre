@@ -1,0 +1,18 @@
+{{!
+
+    Renders:
+      Comments
+
+    Microdata:
+      UserComments
+
+}}
+
+{{#is "post"}}
+
+<section itemscope itemtype="http://schema.org/UserComments" class="post-item post-comments" id="comments">
+  <div id="disqus_thread"></div>
+</section>
+
+{{/is}}
+

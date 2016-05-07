@@ -1,0 +1,17 @@
+//
+// Instagram.
+// -----------------------------------------------------------------------------
+// Instagram Javascript Styles.
+//
+
+// States.
+[data-js~="instagram"] {
+  display: none;
+}
+[data-js~="instagram"]:not( [data-js~="instagram-start"] ):last-child {
+  &:extend( .whitespace-fix );
+}
+
+[data-js~="instagram-start"] {
+  display: block;
+}

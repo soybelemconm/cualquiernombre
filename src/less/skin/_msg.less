@@ -1,0 +1,28 @@
+//
+// Msg.
+// -----------------------------------------------------------------------------
+// Skin for msg.
+//
+
+// Block.
+.msg {
+  &:extend( .overlay-inner );
+  &:extend( .overlay );
+}
+
+// Elements.
+.msg-item {
+  &:extend( .overlay-item );
+}
+.msg-back {
+  &:extend( .post-title );
+}
+.msg-back:after {
+  &:extend( .overlay-item:before );
+}
+.msg-back:hover {
+  &:extend( .overlay-item:hover );
+}
+.msg-back:hover:after {
+  &:extend( .overlay-item:hover:before );
+}

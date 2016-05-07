@@ -1,0 +1,17 @@
+//
+// Dribbble.
+// -----------------------------------------------------------------------------
+// Dribbble Javascript Styles.
+//
+
+// States.
+[data-js~="dribbble"] {
+  display: none;
+}
+[data-js~="dribbble"]:not( [data-js~="dribbble-start"] ):last-child {
+  &:extend( .whitespace-fix );
+}
+
+[data-js~="dribbble-start"] {
+  display: block;
+}

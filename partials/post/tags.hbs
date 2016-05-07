@@ -1,0 +1,25 @@
+{{!
+
+    Renders:
+      Tags
+
+    Microdata:
+      Keywords
+
+}}
+
+{{^is "page"}}
+
+{{#foreach tags}}
+{{#if @first}}
+<div class="nav post-tags">
+{{/if}}
+
+  <a href="{{url}}" title="{{name}}" class="nav-item"><span itemprop="keywords">{{slug}}</span></a>
+
+{{#if @last}}
+</div>
+{{/if}}
+{{/foreach}}
+
+{{/is}}

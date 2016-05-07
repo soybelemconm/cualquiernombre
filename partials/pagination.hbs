@@ -1,0 +1,28 @@
+{{!
+
+    Renders:
+      Pagination Current Page Count
+      Pagination Total Page Count
+      Pagination Previous Page
+      Pagination Next Page
+
+}}
+
+<nav class="nav main-item main-pagination" role="pagination">
+
+  <span class="nav-item main-current">
+    Page <span>{{page}}</span> of <span>{{pages}}</span>
+  </span>
+
+  <div class="nav">
+
+    {{#if prev}}
+    <a rel="prev" href="{{page_url prev}}" class="icon-ui icon-ui-prev nav-item nav-prev" title="Previous Page">Previous</a>
+    {{/if}}
+    {{#if next}}
+    <a rel="next" href="{{page_url next}}" class="icon-ui icon-ui-next nav-item nav-next" title="Next Page">Next</a>
+    {{/if}}
+
+  </div>
+
+</nav>

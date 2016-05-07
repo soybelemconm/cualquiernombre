@@ -1,0 +1,28 @@
+//
+// Post Cover.
+// -----------------------------------------------------------------------------
+// Post with a cover embed / image.
+//
+
+// Block.
+.post--cover .post-wrapper {
+  
+}
+
+// Elements.
+.post--cover .post-wrapper {
+  margin-top: -@space * 2;
+}
+.post--cover .post-body iframe:first-of-type {
+  display: none;
+}
+.post--cover .post-body iframe:first-of-type:last-child {
+  &:extend( .whitespace-fix );
+}
+
+// Queries.
+@media ( min-width: @break-two-query ) {
+  .post--cover .post-wrapper {
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,41 @@
+//
+// Post Link.
+// -----------------------------------------------------------------------------
+// Post of the link type.
+//
+
+// Block.
+.post--link {
+
+}
+
+// Elements.
+.post--link .post-body p:first-of-type > a {
+  &:extend( .h1 );
+  &:extend( .whitespace );
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+.post--link .post-body p:first-of-type > a:after {
+  &:extend( .icon-ui:after, .icon-ui-next:after );
+  position: relative;
+  top: 2px;
+  font-size: 30px;
+  margin-left: @space / 4;
+}
+
+// States.
+.post--link .post-body p:first-of-type > a:after {
+  &:extend( .ani );
+}
+.post--link .post-body p:first-of-type > a:hover:after {
+  &:extend( .ani-right );
+}
+
+// Queries.
+@media ( min-width: @break-three-query ) {
+}

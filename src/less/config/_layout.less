@@ -1,0 +1,64 @@
+//
+// Config - Layout.
+// -----------------------------------------------------------------------------
+
+// Space
+// -----------------------------------------------------------------------------
+@space: 16px;
+
+// Type
+// -----------------------------------------------------------------------------
+//
+// 15px - 35cpl  - 200px.
+// 15px - 40cpl  - 265px.
+// 15px - 60cpl  - 400px.
+// 15px - 75cpl  - 495px;
+// 16px - 60cpl  - 425px.
+// 16px - 75cpl  - 530px.
+// 16px - 80cpl  - 600px.
+// 17px - 60cpl  - 440px.
+// 17px - 75cpl  - 560px.
+// 17px - 80cpl  - 600px.
+// 17px - 80cpl  - 675px.
+// 17px - 100cpl - 750px.
+//
+
+@type-max-one:   344px;
+@type-max-two:   480px;
+@type-max-three: 544px;
+@type-max-four:  608px;
+@type-max-five:  706px;
+
+// Images
+// -----------------------------------------------------------------------------
+@img-max-one: 500px;
+@img-max-two: 640px;
+@img-max-three: 1024px;
+
+// Sidebar
+// -----------------------------------------------------------------------------
+@side: 256px;
+
+// Break Points.
+// -----------------------------------------------------------------------------
+
+// One.
+@break-one-max: ( @type-max-one + ( @space * 4 ) );
+// Two.
+@break-two-query: ( @type-max-one + ( @space * 4 ) + 17px );
+@break-two-max: ( @type-max-two + ( @space * 3 ) + ( @space * 2 ) );
+// Three.
+@break-three-query: ( @type-max-two + ( @space * 4 ) + ( @space * 4 ) + 17px );
+@break-three-max: ( @type-max-three + ( @space * 4 ) + ( @space * 4 ) );
+// Four.
+@break-four-query: ( @type-max-two + ( @space * 8 ) + ( @space * 6 ) + 17px );
+@break-four-max: ( @type-max-four + ( @space * 8 ) + ( @space * 6 ) );
+// Five - Sidebar.
+@break-five-query: ( @type-max-two + ( @space * 8 ) + ( @space * 6 ) + ( @space * 4 ) + ( @space * 4 ) + ( @space * 4 ) + @side + 17px );
+@break-five-max: ( @type-max-four + ( @space * 8 ) + ( @space * 6 ) + ( @space * 4 ) + ( @space * 4 ) + ( @space * 4 ) + @side );
+// Six.
+@break-six-query: ( @type-max-three + ( @space * 9 ) + ( @space * 6 ) + ( @space * 6 ) + ( @space * 6.5 ) + ( @space * 6 ) + @side  + 17px  );
+@break-six-max: ( @type-max-four + ( @space * 9 ) + ( @space * 6 ) + ( @space * 6 ) + ( @space * 6.5 ) + ( @space * 6 )  + @side );
+// Seven.
+@break-seven-query: ( @type-max-four + ( @space * 10 ) + ( @space * 6 ) + ( @space * 8 ) + ( @space * 9 ) + ( @space * 8 ) + @side  + 17px  );
+@break-seven-max: ( @type-max-five + ( @space * 10 ) + ( @space * 6 ) + ( @space * 8 ) + ( @space * 9 ) + ( @space * 8 ) + @side );

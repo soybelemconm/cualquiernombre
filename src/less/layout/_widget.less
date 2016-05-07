@@ -1,0 +1,82 @@
+//
+// Widget.
+// -----------------------------------------------------------------------------
+// Layout styles for widget.
+//
+
+// Block.
+.widget {
+  &:extend( .whitespace );
+  float: left;
+  width: 100%;
+}
+
+// Elements.
+.widget-grid {
+  margin-bottom: 0;
+}
+.widget-img {
+  position: relative;
+  z-index: 1;
+  top: 50%;
+  right: 0;
+  left: 0;
+  padding-right: 0;
+  transform: translateY( -50% );
+}
+.widget-meta {
+  position: absolute;
+  z-index: 2;
+  top: 50%;  
+  left: 50%;
+  width: auto;
+  padding-right: 0;
+  margin-bottom: 0;
+  transform: translate( -50%, -50% );
+  text-align: center;
+}
+.widget-meta .overlay-item {
+  position: relative;
+  overflow: visible;
+  max-width: 100%;
+}
+
+// States.
+.widget-item .overlay-item {
+  &:extend( .ani-hide );
+  position: relative;
+  transition-duration: .25s;
+  transition-property: top, left, opacity, visibility;
+  top: @space / 2;
+  opacity: 0;
+  visibility: hidden;
+}
+.widget-item .overlay:hover .overlay-item {
+  top: 0;
+  left: 0;
+  &:extend( .ani-show );
+}
+
+// Queries.
+@media ( min-width: @break-five-query ) {
+  .widget-item .overlay-item {
+    left: @space /2;
+    top: 0;
+  }
+}
+@media ( min-width: @break-seven-query ) {
+  .widget .bricks-item-outer {
+    margin-bottom: ( @space / 4 ) * 3;
+  }
+  .widget .bricks-item {
+    right: ( @space / 4 ) * 3;
+    bottom: ( @space / 4 ) * 3;
+  }
+  .widget .bricks-item-outer:nth-child( even ) .bricks-item {
+    left: ( @space / 4 ) * 3;
+  }
+  .widget .bricks-item-outer:nth-last-of-type( 2 ), 
+  .widget .bricks-item-outer:nth-last-of-type( 1 ) {
+    margin-bottom: -( @space / 4 ) * 3;
+  }
+}

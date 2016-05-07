@@ -1,0 +1,46 @@
+//
+// Post Chat.
+// -----------------------------------------------------------------------------
+// Post of the chat type.
+//
+
+// Block.
+.post--chat {
+  
+}
+
+// Elements.
+.post--chat .post-icon {
+  margin-bottom: @space / 2;
+}
+.post--chat .post-body ul:first-of-type {
+  &:extend( .dialogue );
+}
+.post--chat .post-body ul:first-of-type > li:last-child {
+  &:extend( .dialogue > .dialogue-line:last-child );
+}
+.post--chat .post-body ul:first-of-type > li {
+  &:extend( .dialogue-line );
+  padding-left: 0;
+}
+.post--chat .post-body ul:first-of-type > li:before {
+  display: none;
+}
+.post--chat .post-body ul:first-of-type > li > strong {
+  &:extend( .dialogue-title );
+}
+.post--chat .post-body ul:first-of-type > li > em {
+  &:extend( .dialogue-item );
+}
+
+// Queries.
+@media ( min-width: @break-four-query ) {
+  .post--chat .post-icon {
+    margin-bottom: @space * 1.5;
+  }
+}
+@media ( min-width: @break-seven-query ) {
+  .post--chat .post-icon {
+    margin-bottom: @space * 2;
+  }
+}

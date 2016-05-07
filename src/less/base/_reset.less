@@ -1,0 +1,98 @@
+//
+// Reset.
+// -----------------------------------------------------------------------------
+// Resets browser to workable state. Doesn't include any layout specifics.
+//
+
+@viewport { 
+  width: device-width; 
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+*:focus {
+  outline: none;
+}
+html {
+  height: 100%;
+  box-sizing: border-box;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  height: 100%;
+  margin: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+  border: 0;
+  font-style: italic;
+}
+object,
+iframe,
+embed {
+  max-width: 100%;
+}
+figure {
+  margin: 0;
+}
+figure > * {
+  width: 100%;
+  margin-bottom: 0;
+}
+ul,
+ol {
+  margin-top: 0;
+}
+li > ul,
+li > ol {
+  margin-bottom: 0;
+}
+pre,
+code {
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+  font-size: .9em;
+}
+pre {
+  white-space: pre;
+  word-wrap: break-word;
+  overflow-x: auto;
+  -webkit-text-size-adjust: none;
+}
+pre > code {
+  padding: 0;
+  background: inherit;
+  color: inherit;
+  border-radius: 0;
+}
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+textarea {
+  vertical-align: top;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+hr {
+  margin-top: 0;
+  height: 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 0;
+  border-left: 0;
+}

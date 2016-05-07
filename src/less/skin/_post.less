@@ -1,0 +1,71 @@
+//
+// Post
+// -----------------------------------------------------------------------------
+// Skin for post.
+//
+
+// Block.
+
+
+// Elements.
+.post-item {
+  &:extend( .main-post );
+}
+.post-item:last-child {
+  &:extend( .main-item:last-child );
+}
+.post-icon {
+  color: @post-icon;
+}
+// Title.
+.post-title {
+  &:extend( h1 );
+}
+// Anchor.
+.post-body p a {
+  border-bottom: 1px solid @anchor-border;
+}
+.post-body p a:hover {
+  border-bottom-color: @anchor-border-hover;
+}
+// HR.
+.post-body hr {
+  &:extend( .main-post );
+}
+// Read More.
+p.post-more {
+  &:extend( .post-title );
+}
+p.post-more a {
+  border-bottom: 0;
+  color: inherit;
+}
+// Table.
+.post-body th {
+  font-weight: @body-bold;
+}
+.post-body th:after {
+  border-bottom: 1px solid @main-border;
+}
+// Mark.
+.post-body mark {
+  color: @mark;
+  background-color: @mark-bg;
+}
+// Footnotes.
+.post-body [href^="#fn"] {
+  &:extend( .footnotes-link );
+}
+.post-body .footnotes ol,
+.post-body .footnote:before {
+  color:inherit;
+}
+// Tags.
+.post-tags,
+.post-tags .nav-item:before {
+  color: @post-tags;
+}
+.post-tags .nav-item:hover,
+.post-tags .nav-item:hover:before {
+  color: @post-tags-hover;
+}

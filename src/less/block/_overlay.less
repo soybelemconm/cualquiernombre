@@ -1,0 +1,45 @@
+//
+// Overlay.
+// -----------------------------------------------------------------------------
+// Overlay element.
+//
+// <div class="overlay">
+//   <div class="overlay-cover"></div>
+//   <span class="overlay-close"></span>
+// </div>
+//
+
+// Block.
+.overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+// Elements.
+.overlay-inner {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  cursor: pointer;
+}
+.overlay-item {
+  position: absolute;
+  z-index: 2;
+}
+.overlay-close {
+  top: @space;
+  right: @space;
+}
+
+// States.
+.overlay .overlay-inner {
+  &:extend( .ani );
+  &:extend( .ani-hide );
+}
+.overlay:not( [data-js~="overlay"] ):hover .overlay-inner,
+[data-js~="overlay-active"]:hover .overlay-inner {
+  &:extend( .ani-show );
+}

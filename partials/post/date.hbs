@@ -1,0 +1,15 @@
+{{!
+
+    Renders:
+      Date
+
+    Microdata:
+      Published
+
+}}
+
+{{^is "page"}}
+
+<a itemprop="datePublished" href="{{url}}" class="meta-item meta-date">{{date published_at format="MMM DD, YYYY"}}</a>
+
+{{/is}}

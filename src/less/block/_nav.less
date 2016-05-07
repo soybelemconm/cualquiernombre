@@ -1,0 +1,56 @@
+//
+// Nav.
+// -----------------------------------------------------------------------------
+// A horizontal collection of links.
+//
+// <div class="nav">
+//   <a class="nav-link">Home</a>
+//   <a class="nav-link">About</a>
+//   <a class="nav-link">Purchase</a>  
+// </div>
+//
+
+// Block.
+.nav {
+  &:extend( .s2 );
+  &:extend( .whitespace );
+  float: left;
+  width: 100%;
+}
+.nav > .nav-item:first-child {
+  margin-left: 0;
+}
+.nav > .nav-item:last-child {
+  &:extend( .wrapper > *:last-child );
+  margin-right: 0;
+}
+.nav > .nav:last-child {
+  &:extend( .wrapper > *:last-child );
+}
+
+// Elements.
+.nav-item {
+  float: left;
+  margin-right: @space / 2;
+  margin-left: @space / 2;
+}
+.nav-prev:before,
+.nav-next:after {
+  position: relative;
+  top: 1px;
+  font-size: 10px;
+  margin-left: @space / 4;
+  margin-right: @space / 4;
+}
+
+// States.
+.nav-prev:before,
+.nav-next:after {
+  &:extend( .ani );
+}
+.nav-prev:hover:before {
+  &:extend( .ani-left );
+}
+.nav-next:hover:after {
+  &:extend( .ani-right );
+}

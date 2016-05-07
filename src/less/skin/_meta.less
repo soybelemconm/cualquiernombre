@@ -1,0 +1,32 @@
+//
+// Meta.
+// -----------------------------------------------------------------------------
+// Skin for meta.
+//
+
+// Block.
+.meta {
+  color: @meta;
+  text-transform: capitalize;
+}
+
+// Elements.
+.meta-item {
+  color: inherit;
+}
+.meta-action:before {
+  color: @meta-icon;
+}
+.meta-item:before {
+  color: rgba( red(@meta-icon), green(@meta-icon), blue(@meta-icon), .6 );
+}
+.meta-item:hover {
+  color: @meta-hover;
+}
+.meta-action:hover:before,
+.meta-shares[data-js~="click-active"]:before {
+  color: @meta-icon-hover;
+}
+.meta-item:hover:before {
+  color: @meta-icon-hover;
+}

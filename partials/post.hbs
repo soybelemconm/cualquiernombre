@@ -1,0 +1,106 @@
+{{!
+
+    Renders:
+      Post Media
+      Post Sidebar Shares
+      Post Sidebar Author
+      Post Sidebar Date
+      Post Sidebar Comments Count
+      Post Sidebar Shares Count
+      Post Sidebar Tags
+      Post Body Types
+      Post Body Title
+      Post Body Author
+      Post Body Date
+      Post Body Comments Count
+      Post Body Shares Count
+      Post Body Excerpt
+      Post Body Content
+      Post Body Read More
+      Post Body Tags
+      Post Comments
+
+    Microdata:
+      BlogPosting
+
+}}
+
+<article itemscope itemtype="http://schema.org/BlogPosting" class="post{{^if image}}{{^has tag="_quote, _link, _chat, _audio, _video"}} post--text{{/has}}{{/if}}{{#if image}}{{^has tag="_quote, _link, _chat, _audio, _video"}} post--photo post--cover{{#has tag="_overlay"}}{{^is "post, page"}} post--overlay{{/is}}{{/has}}{{/has}}{{/if}}{{^if image}}{{^has tag="quote, _link, _chat, _video"}}{{#has tag="_audio"}} post--audio post--cover{{#has tag="_overlay"}}{{^is "post, page"}} post--overlay{{/is}}{{/has}}{{/has}}{{/has}}{{/if}}{{^if image}}{{^has tag="quote, _link, _audio, _chat"}}{{#has tag="_video"}} post--video post--cover{{#has tag="_overlay"}}{{^is "post, page"}} post--overlay{{/is}}{{/has}}{{/has}}{{/has}}{{/if}}{{^if image}}{{^has tag="_link, _chat, _audio, _video"}}{{#has tag="_quote"}} post--quote{{/has}}{{/has}}{{/if}}{{^if image}}{{^has tag="_quote, _chat, _audio, _video"}}{{#has tag="_link"}} post--link{{/has}}{{/has}}{{/if}}{{^if image}}{{^has tag="_link, _quote, _audio, _video"}}{{#has tag="_chat"}} post--chat{{/has}}{{/has}}{{/if}}{{^is "post, page"}} post--index{{/is}}{{#is "post"}} post--permalink{{/is}}{{#is "page"}} post--page{{/is}} main-item main-post" id="{{id}}" data-js="post{{^if image}}{{^has tag="_quote, _link, _chat, _audio, _video"}}{{#has tag="_wide"}}{{#is "post"}} post--wide{{/is}}{{/has}}{{/has}}{{/if}}{{#if image}}{{^has tag="_quote, _link, _chat, _audio, _video"}} post--photo post--cover{{#has tag="_overlay"}}{{^is "post, page"}} post--overlay{{/is}}{{/has}}{{/has}}{{/if}}{{^if image}}{{^has tag="quote, _link, _chat, _video"}}{{#has tag="_audio"}} post--cover{{#has tag="_overlay"}}{{^is "post, page"}} post--overlay{{/is}}{{/has}}{{#has tag="_wide"}}{{#is "post"}} post--wide{{/is}}{{/has}}{{/has}}{{/has}}{{/if}}{{^if image}}{{^has tag="quote, _link, _audio, _chat"}}{{#has tag="_video"}} post--cover{{#has tag="_overlay"}}{{^is "post, page"}} post--overlay{{/is}}{{/has}}{{#has tag="_wide"}}{{#is "post"}} post--wide{{/is}}{{/has}}{{/has}}{{/has}}{{/if}}{{^is "post, page"}} post--index{{/is}}{{#is "post"}} post--permalink{{/is}}" data-permalink="{{url absolute="true"}}">
+  <div class="wrapper post-wrapper">
+
+    {{! Media }}
+    {{> "post/media" }}
+
+    <aside class="post-sidebar" data-js="post-sidebar">
+
+      <div class="meta meta--stacked post-meta">
+
+        {{! Shares }}
+        {{> "post/shares" }}
+
+        {{! Author }}
+        {{> "post/author" }}
+
+        {{! Date }}
+        {{> "post/date" }}
+
+        {{! Comments Count }}
+        {{!> "post/comments-count" }}
+
+        {{! Shares Count }}
+        {{!> "post/shares-count" }}  
+
+      </div>
+
+      {{! Tags }}
+      {{> "post/tags" }}
+
+    </aside>
+
+    <section class="post-item post-body" data-js="post-body">
+
+      {{! Types }}
+      {{> "post/types" }}
+
+      {{! Title }}
+      {{> "post/title" }}
+      
+      <div class="meta post-meta">
+
+        {{! Author }}
+        {{> "post/author" }}
+
+        {{! Date }}
+        {{> "post/date" }}
+
+        <div class="meta-actions">
+
+          {{! Comments Count }}
+          {{!> "post/comments-count" }}
+
+          {{! Shares Count }}
+          {{!> "post/shares-count" }}  
+
+        </div>
+
+      </div>
+
+      {{! Excerpt }}
+      {{> "post/excerpt" }}
+      
+{{! Content }}
+{{> "post/content" }}
+
+      {{! More }}
+      {{> "post/more" }}
+
+      {{! Tags }}
+      {{> "post/tags" }}
+
+    </section>
+
+    {{! Comments }}
+    {{!> "post/comments" }}
+
+  </div>
+</article>

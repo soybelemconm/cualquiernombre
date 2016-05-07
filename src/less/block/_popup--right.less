@@ -1,0 +1,30 @@
+//
+// Popup.
+// -----------------------------------------------------------------------------
+// Popup wrapper. Parent needs `position:relative`.
+//
+// <div class="popup popup--right">
+//   <a class="popup-link">New</a>
+//   <a class="popup-link">Share</a>
+//   <a class="popup-link">Edit</a>
+//   <span class="popupp-item">1 of 3</span>
+// </div>
+//
+
+// Block.
+.popup--right {
+  right: 0;
+  left: auto;
+}
+.popup--right:before {
+  right: 8px;
+  left: auto;
+  margin-right: auto;
+  margin-left: -7px;
+}
+.popup--right:after {
+  right: 10px;
+  left: auto;
+  margin-right: auto;
+  margin-left: -6px;
+}

@@ -1,0 +1,41 @@
+//
+// Msg.
+// -----------------------------------------------------------------------------
+// A nice message.
+//  
+// <div class="msg">
+//   <a class="#" class="msg-item">Click me</a>
+// </div>
+//
+
+// Block.
+.msg {
+  &:extend( .whitespace );
+  &:extend( .s1 );
+  float: left;
+  width: 100%;
+  padding-top: @space;
+  padding-right: @space;
+  padding-bottom: @space;
+  padding-left: @space;
+  background: #ececec;
+}
+.msg > .msg-item:last-child {
+  &:extend( .wrapper > *:last-child );
+}
+
+// Elements.
+.msg-item {
+  float: left;
+  width: 100%;
+}
+
+// States.
+.msg-back:after {
+  &:extend( .ani );
+  margin-left: @space / 4;
+}
+.msg-back:hover:after {
+  &:extend( .ani-right );
+}
+

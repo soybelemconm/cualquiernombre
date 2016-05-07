@@ -1,0 +1,58 @@
+//
+// Main
+// -----------------------------------------------------------------------------
+// Skin for main.
+//
+
+// Block.
+.main {
+
+}
+.main:after {
+  box-shadow: inset -1px 1px 4px 0 @main-shadow;
+  border-top: 1px solid @main-border;
+}
+
+// Elements.
+.main-title {
+  color: @main-title;
+}
+.main-post {
+  border-bottom: 1px solid @main-border;
+}
+.main-item:last-child {
+  border-bottom: 0;
+}
+.main-nav,
+.main-nav .popup {
+  color: @nav;
+}
+.main-nav .popup-item a {
+  color: inherit;
+}
+.main-nav:hover,
+.main-nav[data-js*="click-active"],
+.main-nav .popup-item:hover {
+  color: @nav-hover;
+}
+.main-current,
+.main-current:hover {
+  color: @main-current;
+}
+
+// Elements.
+@media ( min-width: @break-five-query ) {
+  .main:after {
+    box-shadow: inset 1px -1px 4px 0 @main-shadow;
+    border-top: 0;
+    border-left: 1px solid @main-border;
+  }
+  .main-nav .popup {
+    border: none;
+    box-shadow: none;
+    background: none;
+  }
+  .main-nav .popup-item {
+    border-bottom: none;
+  }
+}

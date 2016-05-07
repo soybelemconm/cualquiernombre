@@ -1,0 +1,29 @@
+{{!
+
+    Renders:
+      Navigation Links
+
+    Microdata:
+      Site Navigation Element
+      Site Navigation Element URL
+      Site Navigation Element Name
+
+}}
+
+{{#foreach navigation}}
+
+{{#if @first}}
+<nav class="icon-ui icon-ui-menu btns-item main-nav" data-js="click" role="navigation">
+  <div class="popup popup--right" role="navigation" data-ani="hide" data-js="popup-list">
+{{/if}}
+
+    <div itemscope itemtype="http://schema.org/SiteNavigationElement" class="popup-item{{#if current}} popup-item-current{{/if}}">
+      <a itemprop="url" href="{{url absolute="true"}}" title="{{label}}"><span itemprop="name">{{label}}</span></a>
+    </div>
+
+{{#if @last}}
+  </div>
+</nav>
+{{/if}}
+
+{{/foreach}}

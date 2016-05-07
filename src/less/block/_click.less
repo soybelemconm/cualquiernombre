@@ -1,0 +1,18 @@
+//
+// Click.
+// -----------------------------------------------------------------------------
+// Click Javascript Styles.
+//
+
+// Block.
+[data-js~="click"] {}
+
+// Elements.
+[data-js~="click"] > * {
+  &:extend( .ani );
+  &:extend( .ani-hide );
+}
+[data-js~="click-active"] > * {
+  &:extend( .ani-show );
+  &:extend( .ani-down );
+}

@@ -1,0 +1,48 @@
+{{!
+
+    Renders:
+      Logo
+
+    Microdata:
+      Blog Image
+      Blog URL
+
+}}
+
+<style>
+  .main-logo {
+    height: 56px;
+  }
+  .main-nav {
+    margin-top: calc( ( 56px - 32px ) / 2 );
+    margin-bottom: calc( ( 56px - 32px ) / 2 );
+  }
+  @media ( min-width: 1169px ) {
+    .sidebar {
+      padding-top: calc( 96px + ( 56px - 32px ) );
+    }
+    .sidebar-links {
+      top: calc( 32px + ( 56px - 32px ) / 2 );
+    }
+  }
+  @media ( min-width: 1353px ) {
+    .sidebar {
+      padding-top: calc( 128px + ( 56px - 32px ) );
+    }
+    .sidebar-links {
+      top: calc( 48px + ( 56px - 32px ) / 2 );
+    }
+  }
+  @media ( min-width: 1537px ) {
+    .sidebar {
+      padding-top: calc( 160px + ( 56px - 32px ) );
+    }
+    .sidebar-links {
+      top: calc( 64px + ( 56px - 32px ) / 2 );
+    }
+  }
+</style>
+
+<a itemprop="url" class="main-logo" href="{{@blog.url}}" title="{{title}}">
+  <img itemprop="image" src="{{@blog.logo}}" alt="{{title}}">
+</a>

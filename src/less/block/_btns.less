@@ -1,0 +1,31 @@
+//
+// Btns.
+// -----------------------------------------------------------------------------
+// Buttons.
+//  
+// <div class="btns">
+//   <a class="#" class="btns-item">Click me</a>
+// </div>
+//
+
+// Block.
+.btns {
+  &:extend( .whitespace );
+  float: left;
+  width: 100%;
+}
+
+// Elements.
+.btns-item {
+  position: relative;
+  float: left;
+  cursor: pointer;
+  width: @space * 2;
+  height: @space * 2;
+}
+.btns-item:before {
+  width: inherit;
+  height: inherit;
+  margin-right: 0;
+  line-height: @space * 2;
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!--[if lte IE 9 ]> <html itemscope itemtype="http://schema.org/Blog" class="ie"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html itemscope itemtype="http://schema.org/Blog"> <!--<![endif]-->
+  <head>
+
+    <title>{{meta_title}}</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {{! Page Meta }}
+    <meta name="description" content="{{meta_description}}">
+    <meta name="Designer" content="mikedidthis">
+
+    {{! Favicon }}
+    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+
+    {{! Theme CSS }}
+    <link rel="stylesheet" href="{{asset "css/caesar-layout.min.css"}}">
+    <link rel="stylesheet" href="{{asset "css/caesar-skin-default.min.css"}}">
+
+    {{! Ghost Header }}
+    {{ghost_head}}
+
+  </head>
+
+  <body class="body">
+
+    <div class="wrapper body-wrapper">
+
+      <div class="main" data-js="main">
+        <div class="wrapper main-wrapper">
+
+          <header role="header" class="main-item main-header" data-js="main-item">
+            <div class="wrapper">
+
+              {{!> Logo }}
+              {{!> "logo" }}
+
+              {{! Title }}
+              {{> "title" }}
+
+              {{! Navigation }}
+              {{ navigation }}
+
+            </div>
+          </header>
+
+          {{! Posts }}
+          {{{body}}}
+
+          {{! Pagination }}
+          {{#if pagination.prev}}
+            {{pagination}}
+          {{else}}
+          {{#if pagination.next}}
+            {{pagination}}
+          {{/if}}
+          {{/if}}
+
+        </div>
+      </div>
+
+      <div class="sidebar" data-js="sidebar">
+        <div class="wrapper sidebar-wrapper">
+
+          {{! Description }}
+          {{> "description" }}
+
+          {{! Links }}
+          {{!> "links" }}
+
+          {{! Tagged }}
+          {{!> "tagged" }}
+
+          {{! Mailchimp Form}}
+          {{!> "mailchimp-form" }}
+
+          {{! Dribbble Shots }}
+          {{!> "dribbble" }}
+
+          {{! Instagram Photos }}
+          {{!> "instagram" }}
+
+          {{! Credits }}
+          {{> "credits" }}
+
+        </div>
+      </div>
+
+    </div>
+
+    {{! Theme Javascript }}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="{{asset "js/caesar-core.min.js"}}"></script>
+
+    {{! Ghost Footer }}
+    {{ghost_foot}}
+
+    <script>
+
+      $(function() {
+        caesar.start( {{> "config" }} );
+      });
+
+    </script>
+
+    {{! Disqus }}
+    {{!> "disqus" }}
+
+    {{! Google Analytics }}
+    {{!> "google-analytics" }}
+
+    {{! Highlight.js }}
+    {{!> "highlight-js" }}
+
+  </body>
+</html>

@@ -1,0 +1,24 @@
+//
+// Post Chat.
+// -----------------------------------------------------------------------------
+// Skin for post--chat.
+//
+
+// Block
+.post--chat {
+}
+
+// Elements
+.post--chat .post-body ul:first-of-type {
+  &:extend( .dialogue );
+}
+.post--chat .post-body ul:first-of-type > li:nth-child( odd ) {
+  &:extend( .dialogue-line--alt );
+}
+.post--chat .post-body ul:first-of-type > li > strong {
+  &:extend( .dialogue-title );
+  font-weight: @body-normal;
+}
+.post--chat .post-body ul:first-of-type > li > em {
+  font-style: normal;
+}
